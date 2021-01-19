@@ -22,16 +22,18 @@ export const Img = styled.img`
 
 
 export const H5 = styled.h5`
-    width:85%;
+    width:100%;
     a{
         padding:.4em;
         border-radius:5px;
         height:2em;
         text-decoration:none;
         color:#fff;
-        width:100%;
-        display:inline-block;
+        width:90%;
+        display:flex;
+        align-items:center;
         transition: background-color .3s ease-in;
+
     }
     a:hover{
         background-color:#f50057;
@@ -42,4 +44,8 @@ export const H5 = styled.h5`
 export const Hr = styled.hr`
     width:80%;
     opacity:.3;
+`
+export const Name = styled.h4`
+    color:white;
+    margin:0;
 `
