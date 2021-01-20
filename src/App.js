@@ -8,6 +8,11 @@ import {BrowserRouter,Route} from 'react-router-dom'
 
 import AuthProvider from './context/AuthContext'
 
+import PrivateRoute from './components/PrivateRoute/PrivateRoute'
+
+
+
+
 function App() {
 
   return (
@@ -15,7 +20,9 @@ function App() {
         <BrowserRouter>
           <AuthProvider>
             <Route path="/" exact component={Home}/>
-            <Route path="/userpanel" component={UserPanel}/> 
+            <PrivateRoute path="/userpanel" component={UserPanel}/> 
+
+            {/* <Route path="/userpanel" component={UserPanel}/>  */}
           </AuthProvider>
         </BrowserRouter>
     </>
