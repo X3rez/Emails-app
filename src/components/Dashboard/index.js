@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {NavLink} from 'react-router-dom'
+
 import { IconContext } from "react-icons";
 
 import { FaPlus } from "react-icons/fa";
@@ -8,9 +10,10 @@ import { AiOutlineMail } from "react-icons/ai";
 
 import {IoOptionsSharp} from 'react-icons/io5'
 
+import LogoutButton from "../LogoutButton/index";
+
 import {Aside,Img,H5,Hr,Name} from './styles'
 
-import {NavLink} from 'react-router-dom'
 
 
 
@@ -32,6 +35,9 @@ const Dashboard = ({userImage,userName})=>{
                     <H5>
                         <NavLink activeStyle={{backgroundColor:'#f50057'}} to='/userpanel/configurations'><IoOptionsSharp />CONFIGURATIONS</NavLink>
                     </H5>
+
+                        <LogoutButton />
+
             </IconContext.Provider>
         </Aside>        
     )
