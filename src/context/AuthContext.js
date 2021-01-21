@@ -19,7 +19,6 @@ const AuthProvider = ({children})=>{
     const loginGoogle = () => {
         auth.signInWithPopup(googleProvider)
             .then(res => {
-                console.log(res)
                 history.push('/userpanel')
             })
             .catch(err => console.log(err))
@@ -28,7 +27,6 @@ const AuthProvider = ({children})=>{
     const loginFacebook = () => {
         auth.signInWithPopup(facebookProvider)
             .then(res => {
-                console.log(res)
                 history.push('/userpanel')
             })
             .catch(err => console.log(err))

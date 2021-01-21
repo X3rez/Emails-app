@@ -6,9 +6,9 @@ export const Aside = styled.aside`
     flex-direction:column;
     align-items:center;
     background-color:#000;
-    width:12em;
+    width:18%;
     height:100vh;
-    position:absolute;
+    position:fixed;
     z-index:100;
 `
 
