@@ -6,6 +6,7 @@ import {TheContex} from '../../context/AuthContext'
 
 
 
+
 const PrivateRoute = ({component:Component, ...rest})=>{
     
     const {currentUser} = useContext(TheContex)

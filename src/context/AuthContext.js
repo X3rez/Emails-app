@@ -18,17 +18,13 @@ const AuthProvider = ({children})=>{
     
     const loginGoogle = () => {
         auth.signInWithPopup(googleProvider)
-            .then(res => {
-                history.push('/userpanel')
-            })
+            .then(res => console.log("user logged"))
             .catch(err => console.log(err))
     }
 
     const loginFacebook = () => {
         auth.signInWithPopup(facebookProvider)
-            .then(res => {
-                history.push('/userpanel')
-            })
+            .then(res => console.log("user logged"))
             .catch(err => console.log(err))
     }
 
@@ -40,7 +36,7 @@ const AuthProvider = ({children})=>{
 
     useEffect(() => {
         const unRe = auth.onAuthStateChanged( user => {
-            setCurrentUser(user)
+                setCurrentUser(user)
         })
 
         return unRe
