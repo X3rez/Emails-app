@@ -14,7 +14,7 @@ import firebase from '../../firebase'
         const myUserId = firebase.auth().currentUser.uid;
 
         await database.ref('users/' + myUserId).push().set({owner, mail})
-        console.log('Email added')
+        alert('Email added')
      }
 
      return (

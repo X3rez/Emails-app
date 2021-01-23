@@ -30,7 +30,7 @@ function App() {
             <PrivateRoute path='/userpanel/addemail' component={AddEmail}/>
             <PrivateRoute path='/userpanel/emails' component={Emails} />
             <PrivateRoute path='/userpanel/message/:email' component={Message}/>
-            {/*<PrivateRoute path='/userpanel/configurations' component={} /> */}
+
           </AuthProvider>
         </BrowserRouter>
     </>

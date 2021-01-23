@@ -37,6 +37,7 @@ export const Input = styled.input`
 export const Button = styled.button`
     background-color:#f48fb1;
     border:none;
+    outline:none;
     cursor:pointer;
     width:10em;
     border-radius:5px;

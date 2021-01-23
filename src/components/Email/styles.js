@@ -19,12 +19,16 @@ export const Delete = styled.button`
 
 export const Owner = styled.h4`
     color:#f50057;
+    margin:0;
 `
 
 export const Div = styled.div`
     align-items:center;
-    display:flex;   
-    gap: 1em;
+    display:flex;
     margin:1em;
+    border-radius:5px;
+    background-color:#fff;
+    padding:1em;
+    flex-direction:column;
     cursor:pointer;
 `

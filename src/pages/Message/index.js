@@ -8,6 +8,8 @@ import SunEditor,{buttonList}  from 'suneditor-react';
 
 import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
 
+import Loader from 'react-loader-spinner'
+
 
 
 function Message() {
@@ -32,14 +34,14 @@ function Message() {
 
         try {
             setLoading(true)
-            const res = await fetch("http://localhost:3002/send",{
+            await fetch("http://localhost:3002/send",{
                         method:'POST',
                         headers: {'Content-Type': 'application/json'},
                         body: JSON.stringify(data)
             })
 
             setLoading(false)
-            console.log(res)
+            alert("Email Sent")
 
         } catch (error) {
             console.log(error)
@@ -55,7 +57,7 @@ function Message() {
 
                 <SunEditor setContents={editorValue} onChange={handleChange} height={200} width={600} setOptions={{buttonList:buttonList.complex}} />
                 
-                <Button>{loading ? "Sending" : "Send"}</Button>
+                <Button>{loading ? <> Sending <Loader type="Puff" color="#FFF" height={30} width={30} /></>: "Send"}</Button>
             </Form>
         </Div>
     )

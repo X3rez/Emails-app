@@ -24,11 +24,14 @@ function Emails() {
         });
     },[myUserId,database])
     
+   const dbEmails = Object.keys(emails)
     return (
         <Div>
 
-            {Object.keys(emails).map(id => <Email key={id} owner={emails[id].owner} em={emails[id].mail} id={id}/>)}
-                
+            {dbEmails.map(id => <Email key={id} owner={emails[id].owner} em={emails[id].mail} id={id}/>)}
+            
+            {dbEmails.length < 1 && <h1>You haven't emails added</h1>}
+       
         </Div>
     )
 }
