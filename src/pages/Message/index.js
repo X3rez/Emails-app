@@ -34,7 +34,7 @@ function Message() {
 
         try {
             setLoading(true)
-            await fetch("http://localhost:3002/send",{
+            await fetch("https://emails-app-xerez.herokuapp.com/send",{
                         method:'POST',
                         headers: {'Content-Type': 'application/json'},
                         body: JSON.stringify(data)
